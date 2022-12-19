@@ -1,19 +1,23 @@
+/* CSS GLOBAL */
+
 * {
-    background-color: black;
+    /* background-color: #34495e; */
 }
 
 body {
-    background-color: darkcyan;
+    /* background-color: #34495e; */
     width: 90%;
     height: 100vh;
     margin: auto;
     padding: 1rem;
-    font-family: 'Roboto', sans-serif;
-
+    font-family: 'Varela Round', sans-serif;
+    background: #3C3B3F;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #605C3C, #3C3B3F);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #605C3C, #3C3B3F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .container {
-    background-color: aliceblue;
+    /* background-color: #2980b9; */
     width: 90%;
     /* min-height: 90vh; */
     margin: auto;
@@ -24,8 +28,26 @@ body {
     /* justify-content: space-between; */
 }
 
+/* HEADER */
+
 .header {
     padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__content--logo {
+    /* width: 10%; */
+    font-size: 1.4em;
+}
+
+.header__content--logo strong {
+    font-weight: bold;
+}
+
+.header__content--title {
+    //
 }
 
 .header__title {
@@ -39,8 +61,19 @@ body {
     color: aquamarine;
 }
 
+.header__content--link {
+    width: 5rem;
+    display: flex;
+}
+
+.header__link img {
+    width: 100%;
+}
+
+/* MAIN */
+
 .main {
-    background-color: blue;
+    /* background-color: blue; */
     padding: 3rem 0;
 }
 
@@ -56,14 +89,24 @@ body {
 .main__section--article {
     width: 50%;
     padding: 3rem;
-    background-color: brown;
     border: solid 1px burlywood;
 }
+
+/* FOOTER */
 
 .footer {
     padding: 1rem 0;
 }
 
 .footer__copyright {
-    color: yellowgreen;
+    color: aquamarine;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1000px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
 }
